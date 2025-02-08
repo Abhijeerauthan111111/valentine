@@ -6,7 +6,7 @@ export default function ValentinePage() {
   const [sizeIndex, setSizeIndex] = useState(0);
   const [noText, setNoText] = useState("No");
   const [showGif, setShowGif] = useState(false);
-  const [hideNoButton, setHideNoButton] = useState(false);
+  
 
   const noTexts = [
     "Are you sure?",
