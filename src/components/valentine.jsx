@@ -6,6 +6,7 @@ export default function ValentinePage() {
   const [sizeIndex, setSizeIndex] = useState(0);
   const [noText, setNoText] = useState("No");
   const [showGif, setShowGif] = useState(false);
+  const [hideNoButton, setHideNoButton] = useState(false);
 
   const noTexts = [
     "Are you sure?",
@@ -21,6 +22,15 @@ export default function ValentinePage() {
     "I will be very very very sad...",
     "Ok fine, I will stop asking...",
     "Just kidding, say yes please! ❤️",
+    "Don't do this to me 😭",
+    "I'm not giving up!",
+    "Pretty please? 🥺",
+    "Come on, say yes! 💝",
+    "You can't resist forever!",
+    "My heart wants you! ❤️",
+    "Just one yes! 🎀",
+    "Almost clicked yes, right?",
+    "Final final chance! 💖"
   ];
 
 
@@ -73,12 +83,14 @@ export default function ValentinePage() {
               Yes
             </button>
 
-            <button
-              onClick={handleNoClick}
-              className="bg-red-500 text-white font-semibold py-2 px-6  shadow-lg transition-all duration-300 w-auto"
-            >
-              {noText}
-            </button>
+            {sizeIndex < 22 && (
+              <button
+                onClick={handleNoClick}
+                className="bg-red-500 text-white font-semibold py-2 px-6  shadow-lg transition-all duration-300 w-auto"
+              >
+                {noText}
+              </button>
+            )}
           </div>
           <img src={loveGif2} alt="Cute giphy" className="mt-6 w-full max-w-[200px] mx-auto" />
         </div>
