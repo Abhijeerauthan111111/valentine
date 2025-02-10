@@ -69,6 +69,7 @@ export default function ValentinePage() {
   };
 
   return (
+    <div className='bg-pink-100 px-3 py-8'>
     <div className="flex flex-col items-center justify-center min-h-screen bg-pink-200 text-center p-4" style={{ fontFamily: "Arial, sans-serif" }}>
       {!showGif ? (
         <div className="w-full max-w-md">
@@ -100,6 +101,7 @@ export default function ValentinePage() {
           <img className="w-full max-w-[300px] mx-auto" src={loveGif} alt="Cute giphy" />
         </div>
       )}
+    </div>
     </div>
   );
 }
